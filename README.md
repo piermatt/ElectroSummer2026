@@ -22,10 +22,10 @@ The firmware runs a cyclic-voltammetry (CV) sweep and streams
 ## Repository layout
 
 ```
-firmware/potentiostat_CV.ino   Arduino sketch for the Seeeduino XIAO SAMD21
-schematic/schematic.png        signal-flow schematic (didactic block diagram)
-schematic/netlist.txt          exact pin-to-pin netlist, BOM and known issues
-docs/build_instructions.md     detailed, step-by-step breadboard build guide
+potentiostat_CV.ino — Arduino sketch for the Seeeduino XIAO SAMD21
+gerber — Gerber files for PCB fabrication
+schematic.png — Signal-flow schematic (didactic block diagram)
+build_instructions.md — Detailed, step-by-step breadboard build guide
 ```
 
 ## Quick start
@@ -37,13 +37,8 @@ docs/build_instructions.md     detailed, step-by-step breadboard build guide
 4. Open the Serial Monitor at 115200 baud, press **Enter** to start a scan.
 5. Test first with a single 10 kΩ resistor between WE and CE (RE shorted to
    CE) — you should see a straight current-vs-voltage line through the
-   origin. Then try a real cell, e.g. ≈5 mM K₃[Fe(CN)₆] in 0.1 M KCl.
+   origin. 
 
-## Safety
-
-Wear nitrile gloves and safety glasses when handling the ferricyanide
-(K₃[Fe(CN)₆]) solution or any other electrolyte. Dispose of chemical waste
-according to your lab's protocol.
 
 ## Bill of materials
 
@@ -56,9 +51,7 @@ according to your lab's protocol.
 | C1, C2 | 100 nF | 2 |
 | C3 | 10 µF | 1 |
 
-See `schematic/netlist.txt` for exact node-to-pin connections.
 
 ## License
 
-Add your preferred open-hardware / open-source license here (e.g.
-CERN-OHL-S for the hardware, MIT for the firmware) before publishing.
+This project is open hardware and open source, licensed under the CERN Open Hardware Licence Version 2 – Permissive (CERN-OHL-P).
